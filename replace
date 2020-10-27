@@ -1,0 +1,8 @@
+#!/usr/bin/env perl
+# vim:ft=perl
+use strict;
+use warnings;
+my $v = $ENV{INPUT_IN};
+eval "\$v =~ $ENV{INPUT_RE}";
+print "::set-output name=value::$v\n";
+exit 0;

@@ -1,0 +1,17 @@
+name: Text Replacement
+description: Perform PCRE Search-and-Replace on GitHub Action Variables
+inputs:
+  in:
+    description: The input value / variable to operate on
+    required:    true
+  re:
+    description: The full regular expression to execute (i.e. `s/foo/bar/g`)
+    required:    true
+
+outputs:
+  value:
+    description: The result of applying the regular expression `re` against `in`.
+
+runs:
+  using: docker
+  image: iamjameshunt/replace
